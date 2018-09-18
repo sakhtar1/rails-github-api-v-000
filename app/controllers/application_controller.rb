@@ -11,7 +11,7 @@ private
 def authenticate_user
   client_id = ENV['GITHUB_CLIENT_ID']
   redirect_uri = CGI.escape("http://localhost:3000/auth")
-  github_url = "https://githube.com/oauth2/authenticate?client_id=#{client_id}&response_type=code&redirect_uri=#{redirect_uri}"
+  github_url = "https://github.com/login/oauth/authorize"
   redirect_to github_url unless logged_in?
 end
 
